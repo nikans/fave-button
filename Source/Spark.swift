@@ -150,7 +150,7 @@ extension Spark {
 
 // MARK: animation
 extension Spark{
-    func animateIgniteShow(_ radius: CGFloat, duration:Double, delay: Double = 0) {
+    func animateIgniteShow(_ radius: CGFloat, duration: Double, delay: Double = 0) {
         self.layoutIfNeeded()
         
         let diameter = (dotRadius.first * 2.0) + (dotRadius.second * 2.0)
@@ -160,7 +160,9 @@ extension Spark{
             constraint.constant = height
         }
         
-        UIView.animate(withDuration: 0, delay: delay, options: .curveLinear, animations: {
+        self.alpha = 0
+        
+        UIView.animate(withDuration: 0.2, delay: delay, options: .curveLinear, animations: {
             self.alpha = 1
         }, completion: nil)
         
