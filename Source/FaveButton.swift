@@ -231,7 +231,7 @@ extension FaveButton {
             
             sparks.forEach {
                 $0.animateIgniteShow(igniteToRadius, duration: 0.4, delay:  Const.expandDuration)
-                $0.animateIgniteHide(0.7, delay: 0.2)
+                $0.animateIgniteHide(0.5, delay: 0.2)
             }
         }
     }
