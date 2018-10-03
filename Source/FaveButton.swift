@@ -55,7 +55,7 @@ open class FaveButton: UIButton {
         static let expandDuration       = 0.1498
         static let collapseDuration     = 0.0889
         static let faveIconShowDelay    = Const.expandDuration + Const.collapseDuration/2.0
-        static let dotRadiusFactors     = (first: 0.09, second: 0.05)
+        static let dotRadiusFactors     = (first: 0.09, second: 0.1)
     }
     
     @IBInspectable open var normalColor: UIColor     = UIColor(red: 137/255, green: 156/255, blue: 167/255, alpha: 1)
@@ -221,7 +221,7 @@ extension FaveButton {
         if isSelected {
             let radius           = bounds.size.width/2
             let igniteFromRadius = CGFloat(0) //radius*0.2
-            let igniteToRadius   = radius*1.0
+            let igniteToRadius   = radius*0.8
             
             let ring   = Ring.createRing(self, radius: 0.01, lineWidth: 3, fillColor: self.circleFromColor)
             let sparks = createSparks(igniteFromRadius)
